@@ -1,43 +1,68 @@
-**Nginx Deployment with Minikube**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nginx Deployment with Minikube</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #4CAF50; /* Green */
+        }
+        h2 {
+            color: #333; /* Darker text for subheadings */
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
 
-**Overview**
+<header>
+    <h1>Nginx Deployment with Minikube</h1>
+    <h2>Overview</h2>
+</header>
 
-This repository contains the configuration files and deployment setups for running Nginx on Minikube. The project aims to explore Minikube, port forwarding, and Ingress configurations from scratch.
+<p>This repository contains the configuration files and deployment setups for running Nginx on Minikube. The project aims to explore Minikube, port forwarding, and Ingress configurations from scratch.</p>
 
-Getting Started
+<h2>Getting Started</h2>
 
-**Requirements**
+<h3>Requirements</h3>
+<ul>
+    <li><strong>Minikube:</strong> A running Minikube cluster.</li>
+    <li><strong>kubectl:</strong> Command-line tool to interact with Kubernetes.</li>
+    <li><strong>Docker:</strong> For building and managing container images.</li>
+</ul>
 
-Minikube: A running Minikube cluster.
+<h3>Setup Instructions</h3>
 
-kubectl: Command-line tool to interact with Kubernetes.
+<h4>Clone the Repository:</h4>
+<pre><code>git clone https://github.com/&lt;your-github-username&gt;/nginx-deployment.git</code></pre>
+<pre><code>cd nginx-deployment</code></pre>
 
-Docker: For building and managing container images.
+<h4>Deploy Nginx: Apply the deployment files to your Minikube cluster:</h4>
+<pre><code>kubectl apply -f nginx-deployment.yml</code></pre>
 
-<h/2> Setup Instructions <h>
+<h4>Port Forwarding:</h4>
+<p>To access your application locally, set up port forwarding:</p>
+<pre><code>kubectl port-forward service/nginx-service 8080:80</code></pre>
+<p>This command maps port 8080 on your local machine to port 80 of the Nginx service.</p>
 
-**Clone the Repository:**
+<h4>Check Ingress (if applicable):</h4>
+<p>Ensure your Ingress controller is set up and your Ingress resource is properly configured.</p>
 
-_git clone https://github.com/<your-github-username>/nginx-deployment.git_
+<h4>Check Status:</h4>
+<p>Verify the status of your pods:</p>
+<pre><code>kubectl get pods</code></pre>
 
-_cd nginx-deployment_
+<h3>Notes</h3>
+<p>Feel free to review the files and provide any feedback or suggestions. Your insights would be greatly appreciated.</p>
 
-**Deploy Nginx: Apply the deployment files to your Minikube cluster:**
-
-_kubectl apply -f nginx-deployment.yml_
-
-**Port Forwarding:** To access application locally, set up port forwarding:
-
-_kubectl port-forward service/nginx-service 8080:80_
-
-This command maps port 8080 on the local machine to port 80 of the Nginx service.
-
-Check Ingress (if applicable): Ensure your Ingress controller is set up and your Ingress resource is properly configured.
-
-Check Status: Verify the status of your pods:
-
-_kubectl get pods_
-
-**Notes**
-
-Feel free to review the files and provide any feedback or suggestions. Your insights would be greatly appreciated.
+</body>
+</html>
