@@ -4,7 +4,7 @@
 
 This repository contains the configuration files and deployment setups for running Nginx on Minikube. The project aims to explore Minikube, port forwarding, and Ingress configurations from scratch.
 
-**Getting Started**
+Getting Started
 
 **Requirements**
 
@@ -12,30 +12,28 @@ Minikube: A running Minikube cluster.
 kubectl: Command-line tool to interact with Kubernetes.
 Docker: For building and managing container images.
 Setup Instructions
-Clone the Repository:
 
+**Clone the Repository:**
 
-git clone https://github.com/<your-github-username>/nginx-deployment.git
+_git clone https://github.com/<your-github-username>/nginx-deployment.git_
 
-cd nginx-deployment
+_cd nginx-deployment_
 
-Deploy Nginx: Apply the deployment files to your Minikube cluster:
+**Deploy Nginx: Apply the deployment files to your Minikube cluster:**
 
+_kubectl apply -f nginx-deployment.yml_
 
-kubectl apply -f nginx-deployment.yml
+**Port Forwarding:** To access application locally, set up port forwarding:
 
-Port Forwarding: To access your application locally, set up port forwarding:
+_kubectl port-forward service/nginx-service 8080:80_
 
-
-kubectl port-forward service/nginx-service 8080:80
-
-This command maps port 8080 on your local machine to port 80 of the Nginx service.
+This command maps port 8080 on the local machine to port 80 of the Nginx service.
 
 Check Ingress (if applicable): Ensure your Ingress controller is set up and your Ingress resource is properly configured.
 
 Check Status: Verify the status of your pods:
 
-kubectl get pods
+_kubectl get pods_
 
 **Notes**
 
