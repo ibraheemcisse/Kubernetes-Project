@@ -9,9 +9,12 @@ Getting Started
 **Requirements**
 
 Minikube: A running Minikube cluster.
+
 kubectl: Command-line tool to interact with Kubernetes.
+
 Docker: For building and managing container images.
-Setup Instructions
+
+<h/2> Setup Instructions <h>
 
 **Clone the Repository:**
 
