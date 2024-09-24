@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nginx Deployment with Minikube</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
     </style>
 </head>
 <body>
