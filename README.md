@@ -9,17 +9,6 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
         }
-        h1 {
-            color: #4CAF50; /* Green */
-        }
-        h2 {
-            color: #333; /* Darker text for subheadings */
-        }
-        code {
-            background-color: #f4f4f4;
-            padding: 2px 4px;
-            border-radius: 4px;
-        }
     </style>
 </head>
 <body>
